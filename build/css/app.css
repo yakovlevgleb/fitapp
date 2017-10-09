@@ -386,6 +386,23 @@ body {
   background-image: url("../img/header_bg.jpg");
   background-repeat: no-repeat;
   background-position: center; }
+  .header .container {
+    padding-top: 28px;
+    padding-bottom: 220px;
+    position: relative; }
+    .header .container::before {
+      content: '';
+      width: 135px;
+      height: 166px;
+      bottom: -50px;
+      right: 550px;
+      z-index: 1;
+      background-image: url("../img/berry.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      -webkit-filter: blur(4px);
+              filter: blur(4px); }
 
 .navigation {
   display: -webkit-box;
@@ -393,12 +410,65 @@ body {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-bottom: 200px; }
   .navigation__menu {
     width: 700px;
+    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .navigation__menu a {
+      font-family: "RobotoRegular", Arial, sans-serif;
+      color: #fefefe;
+      text-decoration: none; }
+  .navigation .button {
+    font-family: "RobotoBold", Arial, sans-serif;
+    background-color: #fefefe;
+    color: #2ecc71;
+    padding: 12px 36px;
+    border-radius: 30px; }
+
+.intro {
+  max-width: 600px;
+  font-family: "RobotoLight", Arial, sans-serif;
+  color: #f4f4f4; }
+  .intro h1 {
+    font-size: 64px;
+    line-height: 60px;
+    font-weight: lighter; }
+    .intro h1 b {
+      font-family: "RobotoBold", Arial, sans-serif; }
+  .intro p {
+    line-height: 32px; }
+  .intro__applinks a {
+    position: relative;
+    font-size: 0; }
+  .intro__iphone {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.links::before {
+  content: '';
+  width: 137px;
+  height: 46px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.links__applestore::before {
+  left: 0;
+  top: 0;
+  background-image: url("../img/as.png"); }
+
+.links__googlestore::before {
+  left: 150px;
+  top: 0;
+  background-image: url("../img/gp.png"); }

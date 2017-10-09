@@ -34,11 +34,86 @@ body
 	background-image: url("../img/header_bg.jpg")
 	background-repeat: no-repeat
 	background-position: center
+	.container
+		padding-top: 28px
+		padding-bottom: 220px
+		position: relative
+
+		&::before
+			content: ''
+			width: 135px
+			height: 166px
+			bottom: -50px
+			right: 550px
+			z-index: 1
+			background-image: url('../img/berry.png')
+			background-repeat: no-repeat
+			background-position: center
+			position: absolute
+			filter: blur(4px)
 
 .navigation
 	display: flex
 	justify-content: space-between
+	margin-bottom: 200px
 	&__menu
 		width: 700px
+		margin: 0
 		display: flex
 		justify-content: space-between
+		align-items: center
+		a
+			font-family: "RobotoRegular", Arial, sans-serif
+			color: #fefefe
+			text-decoration: none
+	.button
+		font-family: "RobotoBold", Arial, sans-serif
+		background-color: #fefefe
+		color: #2ecc71
+		padding: 12px 36px
+		border-radius: 30px
+
+.intro
+	max-width: 600px
+	font-family: "RobotoLight", Arial, sans-serif
+	color: #f4f4f4
+	h1
+		font-size: 64px
+		line-height: 60px
+		font-weight: lighter
+		b
+			font-family: "RobotoBold", Arial, sans-serif
+	p
+		line-height: 32px
+
+	&__applinks
+		a
+			position: relative
+			font-size: 0
+	&__iphone
+		position: absolute
+		bottom: 0
+		right: 0
+
+
+
+.links
+	&::before
+		content: ''
+		width: 137px
+		height: 46px
+		position: absolute
+		background-repeat: no-repeat
+		background-position: center
+
+	&__applestore
+		&::before
+			left: 0
+			top: 0
+			background-image: url("../img/as.png")
+
+	&__googlestore
+		&::before
+			left: 150px
+			top: 0
+			background-image: url("../img/gp.png")
