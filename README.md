@@ -1,5 +1,5 @@
 # FITapp [![Build status][travis-image]][travis-url] [![devDependency status][devDependencies-image]][devDependencies-url]
-28 06 2017
+9 10 2017
 
 ## Install & Run
 ```bash
