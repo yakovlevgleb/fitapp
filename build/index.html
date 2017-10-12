@@ -441,16 +441,18 @@ body {
             justify-content: space-between;
     width: 700px;
     margin: 0; }
-    .navigation__menu a {
-      text-decoration: none;
-      color: #fefefe;
-      font-family: "RobotoRegular", Arial, sans-serif; }
-  .navigation .button {
-    padding: 12px 36px;
-    color: #2ecc71;
-    border-radius: 30px;
-    background-color: #fefefe;
-    font-family: "RobotoBold", Arial, sans-serif; }
+  .navigation__link {
+    text-decoration: none;
+    color: #fefefe;
+    font-family: "RobotoRegular", Arial, sans-serif; }
+
+.button {
+  padding: 12px 36px;
+  text-decoration: none;
+  color: #2ecc71;
+  border-radius: 30px;
+  background-color: #fefefe;
+  font-family: "RobotoBold", Arial, sans-serif; }
 
 .intro {
   max-width: 600px;
@@ -606,9 +608,9 @@ body {
       line-height: 32px; }
   .picture-preview__pic {
     position: absolute;
+    z-index: 2;
     bottom: -110px;
     left: 50%;
-    z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -627,31 +629,59 @@ body {
 
 .bck-img1 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 338px;
-  left: -144px; }
+  left: -144px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img2 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 391px;
-  right: -166px; }
+  right: -166px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img3 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 508px;
-  left: 30px; }
+  left: 30px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img4 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 598px;
-  right: 30px; }
+  right: 30px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
+
+.menu {
+  z-index: 2;
+  background-color: #fff; }
+
+.footer {
+  background-color: #2ecc71; }
+  .footer .container {
+    width: 830px;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .footer__header {
+    text-align: center; }
+    .footer__header h2 {
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 48px;
+      font-weight: lighter;
+      line-height: 60px; }
+      .footer__header h2 b {
+        font-family: "RobotoBold", Arial, sans-serif; }
+    .footer__header p {
+      margin-bottom: 60px;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 32px; }
 
 </style>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -668,19 +698,19 @@ body {
 					</div>
 					<ul class="navigation__menu">
 						<ll>
-							<a href="#">About</a>
+							<a href="#" class="navigation__link">About</a>
 						</ll>
 						<ll>
-							<a href="#">Features</a>
+							<a href="#" class="navigation__link">Features</a>
 						</ll>
 						<ll>
-							<a href="#">Reviews</a>
+							<a href="#" class="navigation__link">Reviews</a>
 						</ll>
 						<ll>
-							<a href="#">Blog</a>
+							<a href="#" class="navigation__link">Blog</a>
 						</ll>
 						<ll>
-							<a href="#">Support</a>
+							<a href="#" class="navigation__link">Support</a>
 						</ll>
 						<ll>
 							<a href="#" class="button">Get App</a>
@@ -754,8 +784,60 @@ body {
 			</div>
 		</section>
 
-		<section>
-			<div class="container" style="background-color: red; height: 900px;"></div>
+		<section class="menu">
+			<div class="container">
+				<div class="menu__header">
+					<h2 class="h2">Manage your meal time</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto a iusto laboriosam velit excepturi obcaecati aperiam eius voluptas recusandae autem!</p>
+				</div>
+				<ul class="menu__list">
+					<li class="menu__item">
+						<img src="img/menu-apples.png" alt="">
+						<h3>Apple</h3>
+						<span class="manu__desc">Lorem ipsum dolor sit.</span>
+						<span class="menu__weight">35 g</span>
+						<span class="menu__kcal">189 kcal</span>
+						<div class="menu__time">
+							<time>01:00</time>
+							<span>PM</span>
+						</div>
+					</li>
+					<li class="menu__item menu__item--active">
+						<img src="menu-salad.png" alt="">
+						<h3>Sandwich</h3>
+						<span class="manu__desc">Lorem ipsum dolor sit.</span>
+						<span class="menu__weight">45 g</span>
+						<span class="menu__kcal">140 kcal</span>
+						<div class="menu__time">
+							<time>03:00</time>
+							<span>PM</span>
+						</div>
+					</li>
+					<li class="menu__item">
+						<img src="img/menu-sandwich.png" alt="">
+						<h3>Salad with chicken</h3>
+						<span class="manu__desc">Lorem ipsum dolor sit.</span>
+						<span class="menu__weight">220 g</span>
+						<span class="menu__kcal">255 kcal</span>
+						<div class="menu__time">
+							<time>05:30</time>
+							<span>PM</span>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__header">
+					<h2>Download, customize &
+						<b>enjoy!</b>
+					</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+					<a href="" class="button">Get App</a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

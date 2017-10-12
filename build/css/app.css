@@ -435,16 +435,18 @@ body {
             justify-content: space-between;
     width: 700px;
     margin: 0; }
-    .navigation__menu a {
-      text-decoration: none;
-      color: #fefefe;
-      font-family: "RobotoRegular", Arial, sans-serif; }
-  .navigation .button {
-    padding: 12px 36px;
-    color: #2ecc71;
-    border-radius: 30px;
-    background-color: #fefefe;
-    font-family: "RobotoBold", Arial, sans-serif; }
+  .navigation__link {
+    text-decoration: none;
+    color: #fefefe;
+    font-family: "RobotoRegular", Arial, sans-serif; }
+
+.button {
+  padding: 12px 36px;
+  text-decoration: none;
+  color: #2ecc71;
+  border-radius: 30px;
+  background-color: #fefefe;
+  font-family: "RobotoBold", Arial, sans-serif; }
 
 .intro {
   max-width: 600px;
@@ -600,9 +602,9 @@ body {
       line-height: 32px; }
   .picture-preview__pic {
     position: absolute;
+    z-index: 2;
     bottom: -110px;
     left: 50%;
-    z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -621,28 +623,56 @@ body {
 
 .bck-img1 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 338px;
-  left: -144px; }
+  left: -144px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img2 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 391px;
-  right: -166px; }
+  right: -166px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img3 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 508px;
-  left: 30px; }
+  left: 30px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 .bck-img4 {
   position: absolute;
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
   top: 598px;
-  right: 30px; }
+  right: 30px;
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
+
+.menu {
+  z-index: 2;
+  background-color: #fff; }
+
+.footer {
+  background-color: #2ecc71; }
+  .footer .container {
+    width: 830px;
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .footer__header {
+    text-align: center; }
+    .footer__header h2 {
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 48px;
+      font-weight: lighter;
+      line-height: 60px; }
+      .footer__header h2 b {
+        font-family: "RobotoBold", Arial, sans-serif; }
+    .footer__header p {
+      margin-bottom: 60px;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 32px; }
