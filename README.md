@@ -1,4 +1,7 @@
 # FITapp [![Build status][travis-image]][travis-url] [![devDependency status][devDependencies-image]][devDependencies-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/yakovlevgleb/fitapp.svg)](https://greenkeeper.io/)
+
 9 10 2017
 
 ## Install & Run
